@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <title>Application Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/rough.css') }}">
+
+</head>
+
+<body>
+    <!-- Image and text -->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="../static/LOGO.jpg" width="59" height="30" class="d-inline-block align-top" alt=""> LAKSHMI NARAIN COLLEGE OF TECHNOLOGY AND SCIENCE
+        </a>
+    </nav>
+    <div class="bg-img"> <br>
+        <div class="main">
+            <div class="register">
+                <h2>Application Form</h2>
+
+                <form id="register" method="post" action="/submit" enctype="multipart/form-data">
+
+                    <label>Name:</label>
+                    <br>
+                    <input type="text" name="First_Name" id="name" placeholder="Enter your Name">
+                    <br><br>
+                    <label> Father's Name: </label>
+                    <br>
+                    <input type="text" name="fathers_Name" id="name" placeholder="Enter your Father's Name">
+                    <br><br>
+                    <label> D.O.B. </label>
+                    <br>
+                    <input type="date" name="DOB" id="name" placeholder="Enter your Date Of Birth">
+                    <br><br>
+                    <label> Email </label>
+                    <br>
+                    <input type="email" name="Email_Id" id="name" placeholder="Enter your E-mail">
+                    <br><br>
+                    <label> Phone Number </label>
+                    <br>
+                    <input type="text" name="Mobile_Number" id="name" placeholder="Enter your Phone Number">
+                    <br><br>
+                    <!-- <label for="image"> Upload your Photograph: <sub>(Size<100kb)</sub></label><br>
+                    <input class="file-upload-input" type="file" name="image" id="name" accept="Image/*"> -->
+
+
+                    <label for="image">UPLOAD YOUR IMAGE</label><br>
+                    <input class="file-upload-input" type="file" id="image" name="image">
+
+
+
+                    <br><br>
+                    <label for="sign">UPLOAD YOUR SIGNATURE</label><br>
+                    <input class="file-upload-input" type="file" id="sign" name="sign">
+                    <br><br>
+                    <input type="submit" value="Submit" name="Submit" id="submit">
+
+
+                </form>
+            </div>
+        </div>
+        <br>
+    </div>
+</body>
+
+</html>
